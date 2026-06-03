@@ -93,7 +93,7 @@ This API now includes **interactive Swagger UI documentation** that provides:
 1. Clone the repository:
    ```
    git clone https://github.com/yourusername/ApothecaryShop.git
-   cd ApothecaryShop/ApothecaryShopserver
+   cd ApothecaryShop/server
    ```
 
 2. Install dependencies:

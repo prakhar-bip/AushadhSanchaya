@@ -198,7 +198,7 @@ This project prefers a proper ICO at `/favicon.ico`. There are two supported way
 - Usage:
 
 ```powershell
-cd ApothecaryShopUI
+cd ui
 npm install
 npm run generate:favicon
 ```
@@ -212,14 +212,14 @@ npm run generate:favicon
 - Usage:
 
 ```powershell
-cd ApothecaryShopUI
+cd ui
 npm run generate:favicon:magick
 # or directly
 cd scripts
 ./generate-favicon.ps1
 ```
 
-Both methods produce a multi-size `favicon.ico` and write it to the UI root (`ApothecaryShopUI/favicon.ico`).
+Both methods produce a multi-size `favicon.ico` and write it to the UI root (`ui/favicon.ico`).
 
 PowerShell execution policy note
 

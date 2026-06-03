@@ -34,21 +34,21 @@ cd ApothecaryShop
 ### 2. Configure Environment Variables
 This is a critical step. The backend requires several secret keys and credentials to function. Please follow the detailed instructions in the [Environment Variables](#environment-variables) section below before proceeding.
 
-### 3. Backend Setup (ApothecaryShopserver)
+### 3. Backend Setup (server)
 
 ```bash
-cd ApothecaryShopserver
+cd server
 npm install
 npm run dev
 ```
 
  Server will be available at http://localhost:5000
 
-### 4. Frontend Setup (ApothecaryShopUI)
+### 4. Frontend Setup (ui)
 
 ```bash
 
-cd ../ApothecaryShopUI
+cd ../ui
 npm install
 npm run dev
 ```
@@ -69,10 +69,10 @@ Copy the example file to create your local environment configuration:
 
 ```bash
 
-cp ApothecaryShopserver/.env.example ApothecaryShopserver/.env
+cp server/.env.example server/.env
 ```
 
-Open the newly created ApothecaryShopserver/.env file and update the placeholders with your actual values:
+Open the newly created server/.env file and update the placeholders with your actual values:
 
 
 ```

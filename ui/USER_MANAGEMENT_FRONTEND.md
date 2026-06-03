@@ -57,7 +57,7 @@ Full-featured admin panel with:
 ## File Structure
 
 ```
-ApothecaryShopUI/src/
+ui/src/
 ├── services/
 │   └── userService.js          # New - API service for user management
 ├── pages/

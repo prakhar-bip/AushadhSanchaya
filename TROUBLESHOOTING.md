@@ -93,13 +93,13 @@ VITE_API_URL=http://localhost:5000
 
 ### Terminal 1 (Backend):
 ```bash
-cd /workspaces/ApothecaryShop/ApothecaryShopserver
+cd /workspaces/ApothecaryShop/server
 npm run dev
 ```
 
 ### Terminal 2 (Frontend):
 ```bash
-cd /workspaces/ApothecaryShop/ApothecaryShopUI
+cd /workspaces/ApothecaryShop/ui
 npm run dev
 ```
 
