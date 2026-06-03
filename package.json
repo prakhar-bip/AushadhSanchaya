@@ -9,7 +9,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "install-all": "npm install && cd server && npm install && cd ../ui && npm install",
     "update-all": "cd server && npx npm-check-updates -u && npm install && cd ../ui && npx npm-check-updates -u && npm install",
-    "build": "npm run install-all && cd ui && npm run build",
+    "build": "cd server && npm install && cd ../ui && npm install && npm run build",
     "start": "node server/server.js"
   },
   "dependencies": {
