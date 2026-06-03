@@ -405,7 +405,7 @@ if (process.env.NODE_ENV === 'production') {
   const path = require('path');
   app.use(express.static(path.join(__dirname, '../ui/dist')));
   
-  app.get('*', (req, res) => {
+  app.get('*splat', (req, res) => {
     // Only redirect to React if it doesn't look like an API or Swagger request
     if (!req.path.startsWith('/api') && !req.path.startsWith('/api-docs')) {
       res.sendFile(path.join(__dirname, '../ui/dist/index.html'));
