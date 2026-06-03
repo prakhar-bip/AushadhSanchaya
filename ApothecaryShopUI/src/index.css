@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --alabaster: #F5F7F4;
+  --alabaster-dark: #E9ECE8;
+  --slate: #111A16;
+  --slate-light: #24332D;
+  --slate-dark: #090E0C;
+  --sage: #325E4F;
+  --sage-light: #4A7C6B;
+  --sage-glow: rgba(50, 94, 79, 0.08);
+  --teal: #0D7377;
+  --teal-light: #115F62;
+  --copper: #B86B32;
+  --copper-glow: rgba(184, 107, 50, 0.15);
+  --glass-bg: rgba(254, 254, 253, 0.65);
+  --glass-border: rgba(17, 26, 22, 0.07);
+  --error-red: #B91C1C;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--alabaster);
+  color: var(--slate);
+}
+
+/* Animations */
+@keyframes spinLogo {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes floatHeroImage {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.01); }
+}
+
+@keyframes dotPulseKey {
+  0%, 100% { transform: scale(0.9); opacity: 0.3; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+@keyframes traceStrokeAnimation {
+  0% { stroke-dashoffset: 600; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -600; }
+}
+
+@keyframes drawLeafAnimation {
+  0%, 100% { stroke-dashoffset: 400; }
+  50% { stroke-dashoffset: 0; }
+}
+
+@keyframes pulseFade {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes drawClock {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes floatBubbleUp {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  50% { opacity: 0.6; }
+  100% { transform: translateY(-30px) scale(1.1); opacity: 0; }
+}
+
+.animate-spin-slow {
+  animation: spinLogo 24s linear infinite;
+}
+
+.animate-float-slow {
+  animation: floatHeroImage 8s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseFade 3s ease-in-out infinite;
+}
+
+.animate-clock-spin {
+  animation: drawClock 12s linear infinite;
+}
+
+.animate-bubble-rise {
+  animation: floatBubbleUp 4s ease-in-out infinite;
+}
+
+.trace-line-path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: traceStrokeAnimation 8s linear infinite;
+}
+
+.draw-leaf-path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawLeafAnimation 12s ease-in-out infinite;
+}
+
+/* Custom interactive styling for buttons */
+.btn-theratrace-primary {
+  background-color: var(--sage);
+  color: var(--alabaster);
+  font-weight: 500;
+  font-family: var(--font-sans);
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(77, 110, 96, 0.2);
+}
+
+.btn-theratrace-primary:hover {
+  background-color: var(--sage-light);
+  box-shadow: 0 6px 18px rgba(77, 110, 96, 0.3);
+}
+
+.btn-theratrace-secondary {
+  background-color: transparent;
+  color: var(--slate);
+  font-weight: 500;
+  font-family: var(--font-sans);
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-theratrace-secondary:hover {
+  background-color: var(--alabaster-dark);
+  border-color: var(--slate-light);
+}
+
+.btn-theratrace-copper {
+  background-color: var(--copper);
+  color: var(--alabaster);
+  font-weight: 500;
+  font-family: var(--font-sans);
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(180, 113, 52, 0.2);
+}
+
+.btn-theratrace-copper:hover {
+  background-color: #c48043;
+  box-shadow: 0 6px 18px rgba(180, 113, 52, 0.3);
+}
+
+/* Global Button Interactive Enhancements (Cursor, Hover Scale & Tap Active Micro-animations) */
+button,
+a.btn,
+.btn,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+.btn-theratrace-primary,
+.btn-theratrace-secondary,
+.btn-theratrace-copper {
+  cursor: pointer !important;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+button:hover,
+a.btn:hover,
+.btn:hover,
+[role="button"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.btn-theratrace-primary:hover,
+.btn-theratrace-secondary:hover,
+.btn-theratrace-copper:hover {
+  transform: translateY(-1.5px) scale(1.025) !important;
+}
+
+button:active,
+a.btn:active,
+.btn:active,
+[role="button"]:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+.btn-theratrace-primary:active,
+.btn-theratrace-secondary:active,
+.btn-theratrace-copper:active {
+  transform: translateY(0.5px) scale(0.96) !important;
+}
+
