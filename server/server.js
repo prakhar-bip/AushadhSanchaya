@@ -397,6 +397,7 @@ app.get('/api/profile', authMiddleware, async (req, res) => {
       error: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error',
       timestamp: new Date().toISOString()
     });
+  }
 });
 
 // Serve static assets in production (unified fullstack deployment)
