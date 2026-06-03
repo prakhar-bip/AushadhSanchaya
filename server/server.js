@@ -397,8 +397,20 @@ app.get('/api/profile', authMiddleware, async (req, res) => {
       error: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error',
       timestamp: new Date().toISOString()
     });
-  }
 });
+
+// Serve static assets in production (unified fullstack deployment)
+if (process.env.NODE_ENV === 'production') {
+  const path = require('path');
+  app.use(express.static(path.join(__dirname, '../ui/dist')));
+  
+  app.get('*', (req, res) => {
+    // Only redirect to React if it doesn't look like an API or Swagger request
+    if (!req.path.startsWith('/api') && !req.path.startsWith('/api-docs')) {
+      res.sendFile(path.join(__dirname, '../ui/dist/index.html'));
+    }
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 
