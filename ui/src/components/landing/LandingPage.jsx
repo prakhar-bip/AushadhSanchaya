@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { motion, useInView } from 'motion/react';
 import AuthModal from './AuthModal';
 import './LandingPage.css';
-import theratraceHeroPreview from '../../assets/theratrace_hero_preview.png';
+import aushadhSanchayaHero from '../../assets/aushadh_sanchaya_hero.png';
 
 const FadeInSection = ({ children, delay = 0 }) => {
   const ref = useRef(null);
@@ -224,7 +224,7 @@ const LandingPage = () => {
               <FadeInSection delay={0.25}>
                 <div className="landing-hero-img-wrapper">
                   {/* Dashboard image with continuous slow breathing zoom & soft pulse glow */}
-                  <img src={theratraceHeroPreview} alt="AushadhSanchaya Ledger Interface" className="theratrace-hero-image" />
+                  <img src={aushadhSanchayaHero} alt="AushadhSanchaya Clinical Sourcing" className="theratrace-hero-image" />
                   <div className="hero-copper-glow"></div>
                 </div>
               </FadeInSection>
