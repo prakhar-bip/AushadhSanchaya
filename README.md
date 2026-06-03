@@ -13,6 +13,7 @@ AushadhSanchaya (Sanskrit: *Aushadh* = Medicine, *Sanchaya* = Collection/Accumul
 - [6. Innovative & AI-Driven Features 🔮](#6-innovative--ai-driven-features-)
 - [7. Project Summary 📝](#7-project-summary-)
 - [8. Guide to Start the Project Locally 🚀](#8-guide-to-start-the-project-locally-)
+- [9. Production Deployment Guide 🌐](#9-production-deployment-guide-)
 
 ---
 
@@ -197,3 +198,8 @@ To run the integration and unit test suite:
 cd server
 npm test
 ```
+
+---
+
+## 9. Production Deployment Guide 🌐
+For instructions on how to host this project in production for free (using **MongoDB Atlas**, **Render**, and **Vercel**), please refer to the detailed [DEPLOYMENT.md](DEPLOYMENT.md) guide.
